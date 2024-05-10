@@ -6,8 +6,12 @@ const BlogsCard = (props: blogsCardProps) => {
       key={props.id}
       className="w-80 flex flex-col justify-between gap-3 hover:-translate-y-2 hover:scale-105 hover:drop-shadow-lg transition duration-400 ease-in-out  cursor-pointer bg-white rounded-lg group"
     >
-      <figure className="relative w-full h-[215px]">
-        <img src={props.blogImage} alt="props Image" className="rounded-t-lg" />
+      <figure className="w-full h-[215px]">
+        <img
+          src={props.blogImage}
+          alt="props Image"
+          className="object-cover w-full h-full rounded-t-lg"
+        />
       </figure>
 
       <div className="p-3 flex flex-col gap-1">
@@ -27,7 +31,7 @@ const BlogsCard = (props: blogsCardProps) => {
           <img
             src={props.authorImage}
             alt="author-image"
-            className="rounded-full"
+            className="rounded-full object-cover w-full h-full"
           />
         </figure>
 
