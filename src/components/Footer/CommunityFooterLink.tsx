@@ -1,4 +1,7 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
+
+import ComingSoonModal from "../PopupModal/ComingSoonModal";
 
 type communityLinkObj = {
   id: number;
@@ -14,11 +17,27 @@ const communityLinks: communityLinkObj[] = [
 ];
 
 const CommunityFooterLink = () => {
+  /*************POPUP MODAL******************/
+  const dialog = useRef<HTMLDialogElement>(null);
+
+  const handleOpenModal = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (dialog.current) {
+      dialog.current.showModal();
+      document.body.style.overflowY = "hidden";
+    }
+  };
+  /*************POPUP MODAL******************/
+
   return (
     <>
+      <ComingSoonModal ref={dialog} />
+
       {communityLinks.map((link) => (
         <li key={link.id}>
-          <Link to="#">{link.link}</Link>
+          <Link to="#" onClick={handleOpenModal}>
+            {link.link}
+          </Link>
         </li>
       ))}
     </>
