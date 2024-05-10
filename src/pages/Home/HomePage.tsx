@@ -9,22 +9,26 @@ import Gallery from "../../components/Main/Gallery/Gallery";
 import Events from "../../components/Main/Events/Events";
 import Donate from "../../components/Main/Donate/Donate";
 import FAQComponent from "../../components/Main/FAQ/FAQComponent";
+import BackToTopButton from "../../components/ScrollButton/BackToTopButton";
 
 const HomePage = () => {
   return (
-    <main className="lg:mt-24 sm:mt-[88px] mt-[72px]">
-      <Hero />
-      <Story />
-      <Stats />
-      <About />
-      <Team />
-      <Quote />
-      <Blogs />
-      <Gallery />
-      <Events />
-      <Donate />
-      <FAQComponent />
-    </main>
+    <>
+      <main className="lg:mt-24 sm:mt-[88px] mt-[72px]">
+        <Hero />
+        <Story />
+        <Stats />
+        <About />
+        <Team />
+        <Quote />
+        <Blogs />
+        <Gallery />
+        <Events />
+        <Donate />
+        <FAQComponent />
+      </main>
+      <BackToTopButton />
+    </>
   );
 };
 
