@@ -53,9 +53,9 @@ const Footer = () => {
   return (
     <section>
       <div className="bg-gray-800 text-gray-400 flex sm:flex-row flex-col sm:justify-around sm:flex-wrap gap-8 2xl:px-52 lg:py-24 xl:px-24 lg:px-16 py-16 px-8">
-        <Link to="/">
+        <a href="/">
           <img src={logoImg} alt="website-logo" className="size-16" />
-        </Link>
+        </a>
 
         <div>
           <h3 className="text-lg font-semibold text-white mb-5">Learn More</h3>

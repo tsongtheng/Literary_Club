@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import logoImg from "../../assets/images/logo.png";
@@ -45,9 +45,9 @@ const Header = () => {
           : "bg-gray-900 text-gray-300"
       }`}
     >
-      <NavLink to="/">
+      <a href="/">
         <img src={logoImg} alt="website-logo" className="lg:size-16 size-14" />
-      </NavLink>
+      </a>
       <nav className="lg:block hidden">
         <ul className="flex xl:gap-12 gap-8 text-base font-semibold">
           {navItem.map((nav) => (
@@ -65,21 +65,21 @@ const Header = () => {
         </ul>
       </nav>
       <div className="lg:flex items-center gap-3 hidden">
-        <NavLink to="/login">
+        <Link to="/login">
           <button className="rounded-3xl xl:px-6 px-4 py-3 hover:bg-gray-800">
             Log In
           </button>
-        </NavLink>
-        <NavLink to="/signup">
+        </Link>
+        <Link to="/signup">
           <button className="rounded-3xl xl:px-6 px-4 py-3 bg-gray-300 hover:bg-gray-200 text-gray-800">
             Sign Up
           </button>
-        </NavLink>
-        <NavLink to="/donate">
+        </Link>
+        <Link to="/donate">
           <button className="lg:ml-3 rounded-3xl xl:px-6 px-4 py-3 text-white  bg-red-800 hover:bg-red-700 transition tracking-wider">
             Donate Us
           </button>
-        </NavLink>
+        </Link>
       </div>
       {/****************** SMALL SCREEN *****************/}
       <SmallScreenHeader navItems={navItem} />
