@@ -28,10 +28,7 @@ const SmallScreenHeader: React.FC<navItemProps> = ({ navItems }) => {
   return (
     <>
       <div className="flex items-center sm:gap-20 gap-10 lg:hidden text-sm">
-        <NavLink
-          to="/donate"
-          //   onClick={handleOpenModal}
-        >
+        <NavLink to="/donate">
           <button className="px-4 sm:py-3 py-2  rounded-3xl text-white bg-red-800">
             Donate Us
           </button>
@@ -80,7 +77,11 @@ const SmallScreenHeader: React.FC<navItemProps> = ({ navItems }) => {
                   <NavLink
                     to={nav.to}
                     onClick={toggleDrawer}
-                    className="text-lg text-gray-800 hover:text-red-700"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-red-700"
+                        : "text-lg text-gray-800 hover:text-red-700"
+                    }
                   >
                     {nav.link}
                   </NavLink>

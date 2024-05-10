@@ -54,8 +54,9 @@ const Header = () => {
             <li key={nav.id}>
               <NavLink
                 to={nav.to}
-                className="hover:text-red-700"
-                // onClick={handleOpenModal}
+                className={({ isActive }) =>
+                  isActive ? "text-red-700" : "hover:text-red-700"
+                }
               >
                 {nav.link}
               </NavLink>
@@ -64,22 +65,17 @@ const Header = () => {
         </ul>
       </nav>
       <div className="lg:flex items-center gap-3 hidden">
-        {/* <NavLink to="/login" onClick={handleOpenModal}> */}
         <NavLink to="/login">
           <button className="rounded-3xl xl:px-6 px-4 py-3 hover:bg-gray-800">
             Log In
           </button>
         </NavLink>
-        {/* <NavLink to="/signup" onClick={handleOpenModal}> */}
         <NavLink to="/signup">
           <button className="rounded-3xl xl:px-6 px-4 py-3 bg-gray-300 hover:bg-gray-200 text-gray-800">
             Sign Up
           </button>
         </NavLink>
-        <NavLink
-          to="/donate"
-          //  onClick={handleOpenModal}
-        >
+        <NavLink to="/donate">
           <button className="lg:ml-3 rounded-3xl xl:px-6 px-4 py-3 text-white  bg-red-800 hover:bg-red-700 transition tracking-wider">
             Donate Us
           </button>
