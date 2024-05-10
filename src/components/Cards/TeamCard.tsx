@@ -12,11 +12,11 @@ const TeamCard = (props: teamCardProps) => {
       key={props.id}
       className="w-80 p-3 rounded-lg flex flex-col justify-between items-center gap-4 bg-gray-200 border-2 border-gray-200 xl:transition ease-in-out overflow-hidden group"
     >
-      <figure className="relative w-full h-52 rounded-md border-gray-200 overflow-hidden">
+      <figure className="w-full h-52 rounded-md border-gray-200 overflow-hidden">
         <img
           src={props.img}
           alt="Card Image"
-          className="rounded-md group-hover:scale-125 transition duration-300 ease-in-out"
+          className="object-cover w-full h-full rounded-md group-hover:scale-125 transition duration-300 ease-in-out"
         />
       </figure>
 
