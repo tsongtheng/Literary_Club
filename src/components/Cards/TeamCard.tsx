@@ -10,7 +10,7 @@ const TeamCard = (props: teamCardProps) => {
   return (
     <div
       key={props.id}
-      className="w-80 p-3 rounded-lg flex flex-col justify-between items-center gap-4 bg-gray-200 border-2 border-gray-200 xl:transition ease-in-out overflow-hidden group"
+      className="w-80 p-3 rounded-lg flex flex-col justify-between items-center gap-4 bg-gradient-to-r from-red-200 to-gray-300 drop-shadow-lg xl:transition ease-in-out overflow-hidden group"
     >
       <figure className="w-full h-52 rounded-md border-gray-200 overflow-hidden">
         <img
