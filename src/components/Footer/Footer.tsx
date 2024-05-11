@@ -70,7 +70,7 @@ const Footer = () => {
           </h3>
           <ul className="text-sm flex flex-col gap-3">
             <CommunityFooterLink />
-            <li>
+            <li className="hover:text-gray-100 transition">
               <a href="#faq">FAQ</a>
             </li>
           </ul>
