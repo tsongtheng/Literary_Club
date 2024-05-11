@@ -8,7 +8,7 @@ import Blogs from "../../components/Main/Blogs/Blogs";
 import Gallery from "../../components/Main/Gallery/Gallery";
 import Events from "../../components/Main/Events/Events";
 import Donate from "../../components/Main/Donate/Donate";
-import FAQComponent from "../../components/Main/FAQ/FAQComponent";
+import FAQComponent from "../../components/Main/FAQ/faq";
 import BackToTopButton from "../../components/ScrollButton/BackToTopButton";
 
 const HomePage = () => {

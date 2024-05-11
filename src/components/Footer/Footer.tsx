@@ -71,7 +71,7 @@ const Footer = () => {
           <ul className="text-sm flex flex-col gap-3">
             <CommunityFooterLink />
             <li>
-              <Link to="#FAQComponent">FAQ</Link>
+              <a href="#faq">FAQ</a>
             </li>
           </ul>
         </div>

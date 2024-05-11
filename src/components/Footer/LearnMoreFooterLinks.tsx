@@ -19,7 +19,7 @@ const LearnMoreFooterLinks = () => {
   return (
     <>
       {learnMoreLinks.map((link) => (
-        <li key={link.id}>
+        <li key={link.id} className="hover:text-gray-100 transition">
           <Link to={link.to}>{link.link}</Link>
         </li>
       ))}

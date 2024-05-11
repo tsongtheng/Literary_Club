@@ -34,7 +34,7 @@ const CommunityFooterLink = () => {
       <ComingSoonModal ref={dialog} />
 
       {communityLinks.map((link) => (
-        <li key={link.id}>
+        <li key={link.id} className="hover:text-gray-100 transition">
           <Link to="#" onClick={handleOpenModal}>
             {link.link}
           </Link>
