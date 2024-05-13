@@ -1,4 +1,8 @@
-const Linkedin = (props) => {
+type fillProps = {
+  fill: string;
+};
+
+const Linkedin = (props: fillProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

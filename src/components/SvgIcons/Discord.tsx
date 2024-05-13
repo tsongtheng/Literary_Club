@@ -1,4 +1,8 @@
-const Discord = (props) => {
+type fillProps = {
+  fill: string;
+};
+
+const Discord = (props: fillProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
