@@ -14,7 +14,7 @@ The Literary Club website is a digital haven for students, offering a vibrant pl
 
 ## Checkout the App
 
-[Click Me](https://literaryclubofjongchum.vercel.app/)
+[Click Me](https://literaryclubofjongchum.netlify.app/){:target="\_blank"}
 
 ## Getting Started
 
