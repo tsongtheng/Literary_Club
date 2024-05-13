@@ -1,8 +1,8 @@
-"use client";
-
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+
 import LearnMoreButton from "../../Buttons/LearnMoreButton";
+import ComingSoonModal from "../../PopupModal/ComingSoonModal";
 
 interface eventsItem {
   id: number;
@@ -24,8 +24,21 @@ const EventsItems: React.FC<eventsProps> = ({ eventsData }) => {
     setActiveId(activeId === id ? null : id);
   };
 
+  /*************POPUP MODAL******************/
+  const dialog = useRef<HTMLDialogElement>(null);
+
+  const handleOpenModal = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (dialog.current) {
+      dialog.current.showModal();
+      document.body.style.overflowY = "hidden";
+    }
+  };
+  /*************POPUP MODAL******************/
+
   return (
     <>
+      <ComingSoonModal ref={dialog} />
       {eventsData.map((event) => (
         <div
           key={event.id}
@@ -58,7 +71,7 @@ const EventsItems: React.FC<eventsProps> = ({ eventsData }) => {
                 </svg>
               </div>
             </div>
-            <Link to="/events">
+            <Link to="#" onClick={handleOpenModal}>
               <button className="text-white px-6 py-2 bg-red-800 xl:hover:bg-red-700 ">
                 Register
               </button>
@@ -70,7 +83,7 @@ const EventsItems: React.FC<eventsProps> = ({ eventsData }) => {
               <p className="mb-4 text-gray-700 capitalize">{event.location}</p>
               <p className="text-gray-500 font-light">{event.details}</p>
 
-              <Link to="/events">
+              <Link to="#" onClick={handleOpenModal}>
                 <LearnMoreButton />
               </Link>
             </div>
