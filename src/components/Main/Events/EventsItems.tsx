@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
+import { IoIosArrowDown } from "react-icons/io";
 import LearnMoreButton from "../../Buttons/LearnMoreButton";
 import ComingSoonModal from "../../PopupModal/ComingSoonModal";
 
@@ -52,23 +53,14 @@ const EventsItems: React.FC<eventsProps> = ({ eventsData }) => {
               <h3 className="font-bold text-gray-700">{event.date}</h3>
               <div className="flex gap-2 items-center text-gray-700">
                 <p className="text-lg">{event.eventName}</p>
-                <svg
-                  className={`w-4 h-4 text-gray-700 dark:text-gray-700 ${
-                    activeId === event.id ? "rotate-180" : ""
-                  }`}
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 8"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+                <div>
+                  <IoIosArrowDown
+                    className={`text-gray-600 ${
+                      activeId === event.id ? "rotate-180" : ""
+                    }`}
+                    size={26}
                   />
-                </svg>
+                </div>
               </div>
             </div>
             <Link to="#" onClick={handleOpenModal}>

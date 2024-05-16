@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { IoIosArrowDown } from "react-icons/io";
+
 interface FAQItemsObj {
   id: number;
   question: string;
@@ -28,23 +30,15 @@ const FAQItems: React.FC<FAQProps> = ({ faqData }) => {
             <h3 className="text-lg font-semibold text-gray-700">
               {faq.question}
             </h3>
-            <svg
-              className={`w-4 h-4 text-gray-700 dark:text-gray-700 ${
-                activeId === faq.id ? "rotate-180" : ""
-              }`}
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 8"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+
+            <div>
+              <IoIosArrowDown
+                className={`text-gray-700 ${
+                  activeId === faq.id ? "rotate-180" : ""
+                }`}
+                size={26}
               />
-            </svg>
+            </div>
           </div>
           {activeId === faq.id && (
             <p className="text-justify text-gray-500 pt-5">{faq.answer}</p>

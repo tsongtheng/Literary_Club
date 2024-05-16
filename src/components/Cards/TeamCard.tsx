@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import Facebook from "../../components/SvgIcons/Facebook";
-import Linkedin from "../../components/SvgIcons/Linkedin";
-import Twitter from "../../components/SvgIcons/Twitter";
-import Instagram from "../../components/SvgIcons/Instagram";
-import Email from "../../components/SvgIcons/Email";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { MdMail } from "react-icons/md";
 import { teamCardProps } from "./../../types/types";
 
 const TeamCard = (props: teamCardProps) => {
@@ -29,30 +29,50 @@ const TeamCard = (props: teamCardProps) => {
       <div className="p-5 flex justify-center items-center gap-5">
         {props.facebook && (
           <Link to={props.facebook} target="_blank" rel="noopener noreferrer">
-            <Facebook fill="#4A5568" />
+            <FaFacebook
+              fill="#4A5568"
+              size={24}
+              className="hover:scale-110 transition"
+            />
           </Link>
         )}
 
         {props.linkedin && (
           <Link to={props.linkedin} target="_blank" rel="noopener noreferrer">
-            <Linkedin fill="#4A5568" />
+            <FaLinkedinIn
+              fill="#4A5568"
+              size={26}
+              className="hover:scale-110 transition"
+            />
           </Link>
         )}
 
         {props.twitter && (
           <Link to={props.twitter} target="_blank" rel="noopener noreferrer">
-            <Twitter fill="#4A5568" />
+            <FaTwitter
+              fill="#4A5568"
+              size={26}
+              className="hover:scale-110 transition"
+            />
           </Link>
         )}
 
         {props.instagram && (
           <Link to={props.instagram} target="_blank" rel="noopener noreferrer">
-            <Instagram fill="#4A5568" />
+            <FaInstagram
+              fill="#4A5568"
+              size={26}
+              className="hover:scale-110 transition"
+            />
           </Link>
         )}
         {/* EMAIL ID COMPULSORY */}
         <Link to={`mailto:${props.email}`}>
-          <Email fill="#4A5568" />
+          <MdMail
+            fill="#4A5568"
+            size={30}
+            className="hover:scale-110 transition"
+          />
         </Link>
       </div>
     </div>

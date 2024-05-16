@@ -43,7 +43,7 @@ const Events: React.FC = () => {
         <EventsItem eventsData={eventsData} />
       </div>
       <Link to="/events">
-        <ViewAllButton>See All Events</ViewAllButton>
+        <ViewAllButton />
       </Link>
     </section>
   );

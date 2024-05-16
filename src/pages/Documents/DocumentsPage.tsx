@@ -1,4 +1,4 @@
-import pdfIcon from "../../assets/icons/pdf-icon.svg";
+import { FaFilePdf } from "react-icons/fa6";
 
 const pdfFiles = [
   {
@@ -47,7 +47,7 @@ const DocumentsPage = () => {
               className="w-16 flex flex-col gap-2 items-center cursor-pointer hover:scale-105 transition"
               onClick={() => handleViewPdf(pdf.file)}
             >
-              <img src={pdfIcon} alt="pdf-icon" />
+              <FaFilePdf fill="#9b2c2c" size={32} />
               <p className="max-w-16 overflow-hidden  whitespace-nowrap text-overflow-ellipsis text-sm text-gray-500 font-light">
                 {pdf.title}
               </p>

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 import logoImg from "../../assets/images/logo.png";
-import Linkedin from "../../components/SvgIcons/Linkedin";
-import Twitter from "../../components/SvgIcons/Twitter";
-import Facebook from "../../components/SvgIcons/Facebook";
-import Instagram from "../../components/SvgIcons/Instagram";
-import Discord from "../../components/SvgIcons/Discord";
-import Youtube from "../../components/SvgIcons/Youtube";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import LearnMoreFooterLink from "./LearnMoreFooterLinks";
 import CommunityFooterLink from "./CommunityFooterLink";
 
@@ -19,32 +19,62 @@ type footerSocialObj = {
 const footerSocial: footerSocialObj[] = [
   {
     id: 1,
-    icon: <Linkedin fill="#f9f7f6" />,
+    icon: (
+      <FaLinkedinIn
+        size={24}
+        className="text-[#f9f7f6] hover:text-red-700 hover:scale-110 transition duration-200"
+      />
+    ),
     to: "https://www.linkedin.com/",
   },
   {
     id: 2,
-    icon: <Twitter fill="#f9f7f6" />,
+    icon: (
+      <FaTwitter
+        size={24}
+        className="text-[#f9f7f6] hover:text-red-700 hover:scale-110 transition duration-200"
+      />
+    ),
     to: "https://www.x.com/",
   },
   {
     id: 3,
-    icon: <Facebook fill="#f9f7f6" />,
+    icon: (
+      <FaFacebook
+        size={24}
+        className="text-[#f9f7f6] hover:text-red-700 hover:scale-110 transition duration-200"
+      />
+    ),
     to: "https://www.facebook.com/",
   },
   {
     id: 4,
-    icon: <Instagram fill="#f9f7f6" />,
+    icon: (
+      <FaInstagram
+        size={24}
+        className="text-[#f9f7f6] hover:text-red-700 hover:scale-110 transition duration-200"
+      />
+    ),
     to: "https://www.instagram.com/",
   },
   {
     id: 5,
-    icon: <Discord fill="#f9f7f6" />,
+    icon: (
+      <FaDiscord
+        size={28}
+        className="text-[#f9f7f6] hover:text-red-700 hover:scale-110 transition duration-200"
+      />
+    ),
     to: "https://www.discord.com/",
   },
   {
     id: 6,
-    icon: <Youtube fill="#CD201F" />,
+    icon: (
+      <FaYoutube
+        size={28}
+        className="text-[#CD201F] hover:text-[#f9f7f6] hover:scale-110 transition duratio-200"
+      />
+    ),
     to: "https://www.youtube.com/",
   },
 ];

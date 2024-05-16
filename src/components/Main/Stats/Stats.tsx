@@ -1,12 +1,12 @@
-import memberImg from "../../../assets/icons/member.svg";
-import eventsImg from "../../../assets/icons/events.svg";
-import blogsImg from "../../../assets/icons/blogs.svg";
-import donationImg from "../../../assets/icons/donation.svg";
+import { RiTeamFill } from "react-icons/ri";
+import { MdEventAvailable } from "react-icons/md";
+import { FaBlogger } from "react-icons/fa";
+import { BiSolidDonateHeart } from "react-icons/bi";
 import StatsItems from "./StatsItems";
 
 type statsDataObj = {
   id: number;
-  icon: string;
+  icon: JSX.Element;
   statNumber: string;
   description: string;
 };
@@ -14,25 +14,25 @@ type statsDataObj = {
 const statsData: statsDataObj[] = [
   {
     id: 1,
-    icon: memberImg,
+    icon: <RiTeamFill fill="#9b2c2c" size={40} />,
     statNumber: `${100}+`,
     description: "Total Members",
   },
   {
     id: 2,
-    icon: eventsImg,
+    icon: <MdEventAvailable fill="#9b2c2c" size={40} />,
     statNumber: `${10}+`,
     description: "Events Conducted",
   },
   {
     id: 3,
-    icon: blogsImg,
+    icon: <FaBlogger fill="#9b2c2c" size={40} />,
     statNumber: `${20}+`,
     description: "Blogs Published",
   },
   {
     id: 4,
-    icon: donationImg,
+    icon: <BiSolidDonateHeart fill="#9b2c2c" size={40} />,
     statNumber: `${50}+`,
     description: "Total Donation",
   },
